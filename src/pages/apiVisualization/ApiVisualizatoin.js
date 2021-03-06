@@ -4,8 +4,8 @@ import GoHome from '../../components/goBack/GoHome'
 
 export default function ApiVisualizatoin(props) {
     const [data, setData] = useState([])
-    const [page, setPage] = useState(0)
-    const [pageSize, setPageSize] = useState(0)
+    const [page, setPage] = useState("")
+    const [pageSize, setPageSize] = useState("")
     const [fromDate, setFromDate] = useState("")
     const [toDate, setToDate] = useState("")
 
@@ -28,9 +28,6 @@ export default function ApiVisualizatoin(props) {
 
     const onSubmitData = (e) => {
         e.preventDefault();
-        if(page === 0 || pageSize === 0 ) {    
-            alert("please fill the fields")
-        }
        getNewData()
         .then((res) => res.json())
         .then((data) => setData(data.items))
