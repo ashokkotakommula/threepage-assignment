@@ -1,0 +1,74 @@
+.copy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        width: 100%;
+        background: teal;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    form {
+        margin: 30px;
+        input {
+            width: 400px;
+            height: 40px;
+            padding: 4px;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid #ccc;
+
+        }
+        :focus {
+            border-bottom: 2px solid teal;
+            outline: none;
+            transition: 0.3s all ease-in-out;
+        }
+        button {
+            height: 40px;
+            width: 100px;
+            margin-left: 5px;
+            background: teal;
+            outline: none;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            
+        }
+        button:hover {
+            background: white;
+            color: teal;
+            border: 1px solid teal;
+            transition: 0.3s all ease-in-out;
+        }
+    }
+    h4 {
+        color: teal;
+    }
+    .copy-img {
+        img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .copy-container {
+        h1 {
+            font-size: 20px;
+        }
+        form {
+            input {
+                width: 200px;
+            }
+            button {
+                width: 50px;
+                font-size: 12px;
+            }
+        }
+    }
+} 
